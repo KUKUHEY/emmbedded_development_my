@@ -288,3 +288,33 @@
    .idea/
    .vscode/
    ```
+
+```ini
+[alias]
+    graph = log --all --graph --decorate --oneline
+```
+
+
+## 全局 Git 忽略文件配置
+
+1. 运行以下命令设置全局忽略文件路径：
+
+   ```bash
+   git config --global core.excludesfile ~/.gitignore_global
+   ```
+
+2. 创建 `~/.gitignore_global` 文件并添加以下内容：
+
+   ```gitignore
+   # 忽略 macOS 的 .DS_Store 文件
+   .DS_Store
+   *.swp
+   *.swo
+   *.swn
+   *.bak
+   *.tmp
+   *.log
+   *.cache
+   .idea/
+   .vscode/
+   ```
